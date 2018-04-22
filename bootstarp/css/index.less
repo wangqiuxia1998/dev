@@ -1,0 +1,671 @@
+// 顶部的通栏的样式
+.header {
+    .row {
+        &>div {
+            height: 40px;
+            border: 1px solid gray;
+            text-align: center;
+            line-height: 40px; // 子代
+            &>a {
+                color: gray;
+                text-decoration: none;
+                font-size: 13px;
+            }
+        }
+        &>div:nth-child(n+3) {
+            a {
+                margin-left: 10px;
+            }
+        }
+        &>div:first-child {
+            position: relative;
+            img {
+                left: 40px;
+                top: 40px;
+                position: absolute;
+                display: none;
+            }
+            &:hover {
+                img {
+                    display: block;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
+
+// 导航栏 拷贝bootstarp
+.wjs_default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    margin-bottom: 0px;
+    padding: 0px 20px;
+}
+
+
+.wjs_default .navbar-brand {
+    color: #777;
+    height: 80px;
+    line-height: 50px;
+    span {
+        font-size: 50px;
+    }
+    span:first-child {
+        color: red;
+        transform: translateY(5px);
+    }
+    span:last-child {
+        color: black;
+        font-size: 30px;
+        transform: translateY(-5px);
+    }
+}
+
+.wjs_default .navbar-brand:hover,
+.wjs_default .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+
+.wjs_default .navbar-text {
+    color: #777;
+}
+
+.wjs_default .navbar-nav>li>a {
+    color: #777;
+    height: 80px;
+    line-height: 50px;
+}
+
+.wjs_default .navbar-nav>li>a:hover,
+.wjs_default .navbar-nav>li>a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom: 3px solid red;
+}
+
+.wjs_default .navbar-nav>.active>a,
+.wjs_default .navbar-nav>.active>a:hover,
+.wjs_default .navbar-nav>.active>a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+
+.wjs_default .navbar-nav>.disabled>a,
+.wjs_default .navbar-nav>.disabled>a:hover,
+.wjs_default .navbar-nav>.disabled>a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+
+.wjs_default .navbar-toggle {
+    border-color: #ddd;
+}
+
+.wjs_default .navbar-toggle:hover,
+.wjs_default .navbar-toggle:focus {
+    background-color: #ddd;
+}
+
+.wjs_default .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+
+.wjs_default .navbar-collapse,
+.wjs_default .navbar-form {
+    border-color: #e7e7e7;
+}
+
+.wjs_default .navbar-nav>.open>a,
+.wjs_default .navbar-nav>.open>a:hover,
+.wjs_default .navbar-nav>.open>a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+
+@media (max-width: 767px) {
+    .wjs_default .navbar-nav .open .dropdown-menu>li>a {
+        color: #777;
+    }
+    .wjs_default .navbar-nav .open .dropdown-menu>li>a:hover,
+    .wjs_default .navbar-nav .open .dropdown-menu>li>a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .wjs_default .navbar-nav .open .dropdown-menu>.active>a,
+    .wjs_default .navbar-nav .open .dropdown-menu>.active>a:hover,
+    .wjs_default .navbar-nav .open .dropdown-menu>.active>a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .wjs_default .navbar-nav .open .dropdown-menu>.disabled>a,
+    .wjs_default .navbar-nav .open .dropdown-menu>.disabled>a:hover,
+    .wjs_default .navbar-nav .open .dropdown-menu>.disabled>a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+
+.wjs_default .navbar-link {
+    color: #777;
+}
+
+.wjs_default .navbar-link:hover {
+    color: #333;
+}
+
+.wjs_default .btn-link {
+    color: #777;
+}
+
+.wjs_default .btn-link:hover,
+.wjs_default .btn-link:focus {
+    color: #333;
+}
+
+.wjs_default .btn-link[disabled]:hover,
+fieldset[disabled] .wjs_default .btn-link:hover,
+.wjs_default .btn-link[disabled]:focus,
+fieldset[disabled] .wjs_default .btn-link:focus {
+    color: #ccc;
+}
+
+
+
+
+/* 轮播图的样式 */
+
+.banner {
+    .banner_a {
+        height: 410px; // 为了让中间的内容保留 多余的部分 被自动切割
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        &.image_a {
+            background-image: url('../images/slide_01_2000x410.jpg');
+        }
+        &.image_b {
+            background-image: url('../images/slide_02_2000x410.jpg');
+        }
+        &.image_c {
+            background-image: url('../images/slide_03_2000x410.jpg');
+        }
+        &.image_d {
+            background-image: url('../images/slide_04_2000x410.jpg');
+        }
+    }
+    .mobile_a {
+        width: 100%;
+        display: block;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+
+/* 微金所 信息 区域 布局 */
+
+.info {
+    padding-top: 50px; // 如果 给的是 width 固定不变了 屏幕缩小 也不会被压缩
+    .container {
+        max-width: 900px;
+    } //栅格系统
+    .col {
+        &>div {
+            padding-bottom: 20px;
+            padding-left: 30px;
+        }
+    } // 媒体查询
+    .wjs_media {
+        a {
+            color: gray;
+            &:hover {
+                color: red;
+            }
+        }
+
+        .wjs_font {
+        	font-size: 40px;
+        }
+    }
+}
+
+
+// 预约区域的布局
+
+.wjs_media {
+  margin-top: 15px;
+}
+.wjs_media:first-child {
+  margin-top: 0;
+}
+.wjs_media,
+.wjs_media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+.wjs_media-body {
+  width: 10000px;
+}
+.wjs_media-object {
+  display: block;
+}
+.wjs_media-object.img-thumbnail {
+  max-width: none;
+}
+.wjs_media-right,
+.wjs_media > .pull-right {
+  padding-left: 10px;
+  float: right;
+  a{
+    color:gray;
+  
+    &:hover{
+    color: red;
+    text-decoration: underline;
+  }
+
+  }
+}
+.wjs_media-left,
+.wjs_media > .pull-left {
+  padding-right: 10px;
+  float: left;
+  a{
+    color: red;
+    border-bottom: 1px dashed red;
+    &:hover{
+        text-decoration: none;
+    }
+  }
+}
+.wjs_media-left,
+.wjs_media-right,
+.wjs_media-body {
+  // display: table-cell;
+  vertical-align: top;
+}
+.wjs_media-middle {
+  vertical-align: middle;
+}
+.wjs_media-bottom {
+  vertical-align: bottom;
+}
+.wjs_media-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.wjs_media-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.book {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 20px;
+    .container-fluid{
+        max-width: 910px;
+    }
+}
+
+//微金所布局
+.wjs-tabs {
+  border-bottom: 1px solid #ddd;
+}
+.wjs-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+}
+.wjs-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  // border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  color: lightgray;
+}
+.wjs-tabs > li > a:hover {
+  // border-color: #eee #eee #ddd;
+  background-color: transparent;
+}
+.wjs-tabs > li.active > a,
+.wjs-tabs > li.active > a:hover,
+.wjs-tabs > li.active > a:focus {
+  color: #555;
+  cursor: default;
+  background-color: skyblue;
+  // border: 1px solid #ddd;
+  // border-bottom-color: #fff;
+  border-bottom: 2px solid red;
+}
+.wjs-tabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+.wjs-tabs.nav-justified > li {
+  float: none;
+}
+.wjs-tabs.nav-justified > li > a {
+  margin-bottom: 5px;
+  text-align: center;
+}
+.wjs-tabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+@media (min-width: 768px) {
+  .wjs-tabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .wjs-tabs.nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+.wjs-tabs.nav-justified > li > a {
+  margin-right: 0;
+  border-radius: 4px;
+}
+.wjs-tabs.nav-justified > .active > a,
+.wjs-tabs.nav-justified > .active > a:hover,
+.wjs-tabs.nav-justified > .active > a:focus {
+  border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+  .wjs-tabs.nav-justified > li > a {
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .wjs-tabs.nav-justified > .active > a,
+  .wjs-tabs.nav-justified > .active > a:hover,
+  .wjs-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #fff;
+  }
+}
+
+
+/* 特别推荐中的 优惠券布局 */
+.price_ticket{
+    display: block;
+    background-color: red;
+  
+    margin: 10px 0;
+    box-shadow: 2px 2px 3px gray;
+
+    // 手指悬停处 清除外观
+    &:hover{
+      text-decoration: none;
+    }
+
+    // 字体颜色及大小的设置 伪元素
+    &::before{
+      color:white;
+      font-size: 40px;
+      position: absolute;  
+    }
+
+    .ticket_right{
+      min-height: 157px;
+      float: right;
+      width: 120px;
+      padding-top: 20px;
+      // 左边的虚线分隔
+      border-left:1px dashed white;
+      // 布局属性
+      position:relative;
+            p{
+              color:white;
+              text-align: center;
+              font-size: 14px;
+              font-weight: 700;
+              height: 16px;
+              overflow: hidden;
+            }
+
+            // 使用伪元素的方式 添加上下两个半圆
+            &::before{
+              content:'';
+              background-color: #fff;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              top:-10px;
+              left:-10px;
+              position: absolute;
+              box-shadow: inset 0 -1px gray;
+            }  
+            &::after{
+              content:'';
+              background-color: #fff;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              bottom:-10px;
+              left:-10px;
+              position: absolute;
+              box-shadow: inset 0 1px gray;
+            }
+
+    }
+
+    // 左边的盒子
+    .ticket_left{
+      min-height: 157px;
+      overflow: hidden;
+      
+          h4{
+            text-align: center;
+            color: #FFF;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            line-height: 20px;
+            overflow: hidden;
+            height: 20px;
+          }
+          &>div{
+                margin-bottom:10px;
+          }
+          &>div:nth-of-type(2n){
+                 text-align:right;
+                }
+            p{
+              color:white;
+              font-size:13px;
+              font-weight:900;
+              line-height:13px;
+              overflow:hidden;
+          }
+    }
+
+    /* 交集选择器 目的是为了 设置 额外的 颜色  */
+      &.white{
+        background-color:white;
+        color:gray;
+            p{
+              color:gray;
+            }
+            .ticket_right{
+              border-left:1px dashed gray;
+            }
+            h4{
+              color:gray;
+            }
+      }
+}
+
+
+// 新闻栏
+.news{
+    h3{
+      text-align: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid gray;
+      position: relative;
+      &::after{
+        content: '';
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        right: 0;
+        border: 1px solid gray;
+        border-radius: 50%;
+        bottom: -4px;
+        background-color: #fff;
+        z-index: 1;
+      }
+    }
+}
+
+.wjs-newsTabs {
+  // border-bottom: 1px solid #ddd;
+}
+.wjs-newsTabs > li {
+  float: left;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+
+// 当屏幕改变的时候变小li的宽度
+@media screen and(max-width: 1200px){
+  .wjs-newsTabs > li{
+    width: 25%;
+  }
+}
+
+
+.wjs-newsTabs > li > a {
+  margin-right: 2px;
+  // line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: #fff;
+  
+  // // 设置字体图标
+  font-size: 40px;
+  line-height: 70px;
+  text-align: center;
+  padding: 0;
+}
+.wjs-newsTabs > li > a:hover {
+  // border-color: #eee #eee #ddd;
+  background-color: red;
+}
+.wjs-newsTabs > li.active > a,
+.wjs-newsTabs > li.active > a:hover,
+.wjs-newsTabs > li.active > a:focus {
+  // color: #555;
+  cursor: default;
+  background-color: red;
+  // border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
+.wjs-newsTabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+.wjs-newsTabs.nav-justified > li {
+  float: none;
+}
+.wjs-newsTabs.nav-justified > li > a {
+  margin-bottom: 5px;
+  text-align: center;
+}
+.wjs-newsTabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+@media (min-width: 768px) {
+  .wjs-newsTabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .wjs-newsTabs.nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+.wjs-newsTabs.nav-justified > li > a {
+  margin-right: 0;
+  border-radius: 4px;
+}
+.wjs-newsTabs.nav-justified > .active > a,
+.wjs-newsTabs.nav-justified > .active > a:hover,
+.wjs-newsTabs.nav-justified > .active > a:focus {
+  border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+  .wjs-newsTabs.nav-justified > li > a {
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .wjs-newsTabs.nav-justified > .active > a,
+  .wjs-newsTabs.nav-justified > .active > a:hover,
+  .wjs-newsTabs.nav-justified > .active > a:focus {
+    border-bottom-color: #fff;
+  }
+}
+
+
+// 新闻页面点击区域的线段
+.wjs-newsTabs{
+  position: relative;
+}
+.wjs-newsTabs .line{
+  top: 20px;
+  left: 35px;
+  position: absolute;
+  height: 80%;
+  border: 1px dashed gray;
+}
+
+.news{
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+    .tab-content{
+      ul{
+        list-style: none;
+        padding-top: 30px;
+        li{
+          padding: 10px;
+          a{
+            color:gray;
+          }
+        }
+      }
+    }
+}
+
+
+// 底部合作单位样式
+.footer{
+  text-align: center;
+  background-color: #eee;
+  padding-top: 20px;
+  
+  h3{
+    margin-top: 0;
+  }
+  ul{
+    display: inline-block;
+    list-style:none;
+    li{
+      float: left;
+      font-size: 80px;
+      margin:0 20px;
+      a{
+        color: gray;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+/*通用样式*/
+*,
+::before,
+::after{
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	/*点击高亮效果*/ 
+	-webkit-top-highlight-color: transparent;
+
+	/*盒子模型*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	/*设置字体*/
+	font-family: 微软雅黑，sans-serif;
+}
+
+	/*去掉input标签默认的样式*/
+input{
+	border:none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+/*a标签的下划线*/
+a{
+	text-decoration: none;
+}
+
+/*去掉小圆点*/
+ol,ul{
+	list-style-type: none;
+}
+
+/*清除浮动*/
+.f_l{
+	float: left;
+}
+.f_r{
+	float: right;
+}
+
+.clearfix::before,
+.clearfix::after{
+	content:'';
+	display: block;
+	line-height: 0;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+
+
+/*边框通用样式*/
+.b_l{
+	border-left: 1px solid #eee;
+}
+.b_r{
+	border-right: 1px solid #eee;
+}
+.b_t{
+	border-top: 1px solid #eee;
+}
+.b_b{
+	border-bottom: 1px solid #eee;
+}

@@ -1,0 +1,45 @@
+<div class="item">
+	<!-- 日期分类 -->
+	<div class="mark">本周推荐</div>
+	<ul class="posts">
+		<!-- 文章 -->
+		<li ng-repeat="post in posts">
+			<span href="javascript:;" class="tag" ng-if="post.column.name">{{post.column.name}}</span>
+			<div class="cont">
+				<h3>{{post.title}}</h3>
+			<!-- 	<div class="brief">
+					<div class="gallery">
+						<div class="img-box">
+							<img src="./uploads/post_3.png" alt="">
+						</div>
+						<div class="img-box">
+							<img src="./uploads/post_4.png" alt="">
+						</div>
+						<div class="img-box">
+							<img src="./uploads/post_5.png" alt="">
+						</div>
+					</div>
+
+					<p>那里有个很窄的洞，钻进去曾是莲花生大师修行的地方，在藏民心中钻洞是为了洗清</p>
+					<div class="thumb">
+						<img src="./uploads/post_1.png" alt="">
+					</div>
+				</div>	 -->
+				<div class="brief">
+						<!-- 10001 -->
+						<!-- 10002 -->
+						<p ng-class="{only: post.display_style == 10001}" ng-if="post.display_style != 10003">{{post.abstract}}</p>
+						<!-- 10002 -->
+						<div class="thumb" ng-if="post.display_style == 10002">
+							<img ng-src="{{post.thumbs[0].small.url}}" alt="">
+						</div>
+						<!-- 10003 -->
+						<div class="gallery" ng-if="post.display_style == 10003">
+							<img ng-src="{{post.thumbs[0].small.url}}" alt="">
+						</div>
+				</div>						
+			</div>
+		</li>
+		
+	</ul>
+</div>

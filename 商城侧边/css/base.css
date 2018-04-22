@@ -1,0 +1,56 @@
+/*通用样式*/
+*,
+::before,
+::after{
+	margin: 0;
+	padding: 0;
+
+	-webkit-tap-highlight-color: transparent;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box; 
+}
+
+body{
+	font-size: 14px;
+	font-family: '微软雅黑' ,san-serif;
+	overflow: hidden;
+}
+
+/*input去掉默认的样式*/
+input{
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+/*a标签的下划线*/
+a{
+	text-decoration: none;
+}
+
+/*去掉小圆点*/
+ol,li{
+	list-style: none;
+}
+
+/*设置浮动*/
+.f_l{
+	float:left;
+}
+.f_r{
+	float:right;
+}
+
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
